@@ -149,7 +149,11 @@ app.use(bodyParser.json());
 
  app.get('/ruff', async (req, res) => {
 	 console.log(req, 'fooooo you hit')
- })
+ });
+
+ app.get('/testdata', async (req, res) => {
+	res.status(200).json({video_url:`https://cp-video-generation.herokuapp.com/`})
+ });
 // end of importing build version of react client app
  app.listen(port);
  
