@@ -156,7 +156,7 @@ app.use(bodyParser.json());
  });
 // end of importing build version of react client app
  var server = app.listen(port);
-server.timeout = 50000;
+server.timeout = 180000;
  
  console.log(
 	 [
