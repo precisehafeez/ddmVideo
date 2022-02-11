@@ -17,6 +17,7 @@
  const path =require('path');
  const cors= require('cors')  
  const bodyParser = require('body-parser');
+var timeout = require('connect-timeout');
 
  const app = express();
  const port = process.env.PORT || 3000;
@@ -28,6 +29,7 @@
 if(nodeEnv=='developement'){
  app.use(express.static('client/build'))  
 }
+app.use(timeout('200s'));
 var publicDir = path.join(__dirname,'/public'); 
 app.use(express.static(publicDir)); 
 
