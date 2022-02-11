@@ -155,7 +155,8 @@ app.use(bodyParser.json());
 	res.status(200).json({video_url:`https://cp-video-generation.herokuapp.com/`})
  });
 // end of importing build version of react client app
- app.listen(port);
+ var server = app.listen(port);
+server.timeout = 50000;
  
  console.log(
 	 [
