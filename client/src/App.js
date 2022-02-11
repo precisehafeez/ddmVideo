@@ -45,7 +45,7 @@ const  App= ()=> {
           method: 'GET',
           redirect: 'follow'
         }; 
-        fetch(`https://video-gen-app.herokuapp.com/server/?titleColor=${wcolor.replace('#', '%23')}&wordText=${word}&definitionText=${definition}&bgColor=${dcolor.replace('#', '%23')}&formate=${formatValue}`, requestOptions)
+        fetch(`https://onquestapp.herokuapp.com/server/?titleColor=${wcolor.replace('#', '%23')}&wordText=${word}&definitionText=${definition}&bgColor=${dcolor.replace('#', '%23')}&formate=${formatValue}`, requestOptions)
           .then(response => response.json())
           .then((result ) => {
             
